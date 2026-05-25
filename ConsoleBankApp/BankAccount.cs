@@ -10,4 +10,9 @@ public class BankAccount
         AccountNumber = $"ACC{rand.Next(10000, 99999)}"; // Example output: 1386420123
         this.AccountHolderName = AccountHolderName;
         }
+     
+    public static Deposit()
+    {
+
+    }
 }
