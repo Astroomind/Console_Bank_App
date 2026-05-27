@@ -11,8 +11,18 @@ public class BankAccount
         this.AccountHolderName = AccountHolderName;
         }
      
-    public static Deposit()
+    public void Deposit(decimal amount)
     {
+        if (amount <= 0)
+        {
+            Console.WriteLine("Please Deposit more than £0");
+        }
+        else
+        {
 
+            Balance += amount;
+            Console.WriteLine("Deposit successful");
+            Console.WriteLine($"Your Balance is {Balance}");cd 
+        }
     }
 }
