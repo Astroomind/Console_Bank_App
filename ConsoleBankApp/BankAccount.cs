@@ -22,7 +22,24 @@ public class BankAccount
 
             Balance += amount;
             Console.WriteLine("Deposit successful");
-            Console.WriteLine($"Your Balance is {Balance}");cd 
+            Console.WriteLine($"Your Balance is {Balance}"); 
+        }
+    }
+
+    public void Withdraw(decimal amount)
+    {
+        if (amount <= 0)
+        {
+            Console.WriteLine("Please withdraw a positive number");
+        }
+        else if (amount > Balance)
+        {
+            Console.WriteLine("Unable to withdraw, insufficient funds");
+        }
+        else
+        {
+            Balance -= amount;
+            Console.WriteLine($"Withdraw Successful, Your current balance is: {Balance}");
         }
     }
 }
