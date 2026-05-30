@@ -45,11 +45,21 @@ public class BankAccount
             Console.WriteLine($"Withdraw Successful, Your current balance is: {Balance}");
         }
     }
-
-    foreach (Transaction Trans in Transactions)
+    public void PrintTransactionHistory()
+    {
+        if (Transactions.Count == 0)
         {
-        Console.WriteLine(Trans);
+            Console.WriteLine("No Transactions yet");
+            return;
         }
+        foreach (Transaction Trans in Transactions)
+        {
+            Console.WriteLine($"Type: {Trans.Type}");
+            Console.WriteLine($"Amount: {Trans.Amount}");
+            Console.WriteLine($"Date: {Trans.Date}");
+            Console.WriteLine($"Balance After: {Trans.BalanceAfter}");
+        }
+    }
 
     
 }
