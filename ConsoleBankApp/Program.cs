@@ -5,6 +5,9 @@ Console.WriteLine("What is your name?");
 string Name = Console.ReadLine(); //Asking user for their name and creating an instance of BankAccount so that we can use it later on.
 BankAccount Account = new BankAccount(Name);
 
+Console.WriteLine($"Thank you {Name}.");
+Console.WriteLine($"Your account number is: {Account.AccountNumber}.");
+
 bool Running = true;
 
 while (Running == true)
